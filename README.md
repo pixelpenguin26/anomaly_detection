@@ -58,8 +58,8 @@ The dataset consists of environmental measurements recorded every 15 minutes ove
 anomaly_detection/
 ├── README.md # This file
 ├── simulated_data/ # Simulated data and code to generate CSV files
-│ ├── file_csv/ # CSV files and data generation script
-│ └── generate_data.py # Script to generate the simulated data
+│ ├── file_csv/ # CSV files with an without anomalies
+│ └── ciclo_anomalie.ipynb # Script to generate the simulated data
 ├── isolationforest_model/ # Isolation Forest model scripts
 │ ├── model_train.py
 │ ├── model_test.py
