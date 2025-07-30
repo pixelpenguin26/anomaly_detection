@@ -2,7 +2,6 @@
 
 This project explores and compares various **Anomaly Detection models** applied to simulated temperature and humidity time series data. The aim is to identify different types of anomalies using both senmi-supervised and unsupervised techniques.
 
----
 
 ## Simulated Data
 
@@ -17,7 +16,6 @@ The dataset consists of environmental measurements recorded every 15 minutes ove
   - Altered patterns (e.g., doubled sinusoidal cycles)  
   - Multivariate anomalies (disrupted temperature-humidity correlations)  
 
----
 
 ## Models Used
 
@@ -31,7 +29,6 @@ The dataset consists of environmental measurements recorded every 15 minutes ove
   - Suitable for structural or cyclic anomalies  
   - Produces anomaly scores between 0 and 1  
 
----
 
 ## Experimental Setup
 
@@ -41,7 +38,6 @@ The dataset consists of environmental measurements recorded every 15 minutes ove
 2. **Train on normal data, test on altered data**  
    - More realistic scenario for baseline and anomaly detection.
 
----
 
 ## Features Engineered
 
@@ -50,14 +46,39 @@ The dataset consists of environmental measurements recorded every 15 minutes ove
 - Time of day, day of week  
 - Moving average with window size 3  
 
----
-
 ## Results Summary
 
 - **Isolation Forest**: excels at detecting spikes and strong outliers; less effective for gradual pattern changes.  
 - **PeriodicAverageAnomalyDetector**: effective for periodic and structural anomalies.  
 
----
 
 ## 📁 Project Structure
 
+```sh
+anomaly_detection/
+├── README.md # This file
+├── simulated_data/ # Simulated data and code to generate CSV files
+│ ├── file_csv/ # CSV files and data generation script
+│ └── generate_data.py # Script to generate the simulated data
+├── isolationforest_model/ # Isolation Forest model scripts
+│ ├── model_train.py
+│ ├── model_test.py
+│ ├── utils.py
+│ └── visualization.py
+├── periodicaverage_model/ # Periodic Average Anomaly Detector scripts
+│ ├── model_train.py
+│ ├── model_test.py
+│ ├── utils.py
+│ └── visualization.py
+
+```
+
+
+## 🧠 Conclusions
+
+Choosing the best anomaly detection model depends on:  
+- Data type (univariate vs. multivariate)  
+- Anomaly type (spikes, level shifts, multivariate anomalies, pattern changes)  
+- Availability of labeled data  
+
+Different models suit different scenarios. Empirical comparison is key to selecting the right approach.
