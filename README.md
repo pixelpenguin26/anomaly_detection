@@ -1,10 +1,10 @@
-# 🧠 Anomaly Detection Methods on Time Series
+# Anomaly Detection Methods on Time Series
 
 This project explores and compares various **Anomaly Detection models** applied to simulated temperature and humidity time series data. The aim is to identify different types of anomalies using both senmi-supervised and unsupervised techniques.
 
 ---
 
-## 📊 Simulated Data
+## Simulated Data
 
 The dataset consists of environmental measurements recorded every 15 minutes over 7 days:
 
@@ -19,7 +19,7 @@ The dataset consists of environmental measurements recorded every 15 minutes ove
 
 ---
 
-## 🛠️ Models Used
+## Models Used
 
 - **Isolation Forest**  
   - Random isolation-based anomaly detection  
@@ -33,7 +33,7 @@ The dataset consists of environmental measurements recorded every 15 minutes ove
 
 ---
 
-## 🧪 Experimental Setup
+## Experimental Setup
 
 1. **Train and test on the same dataset**  
    - To evaluate if models detect known anomalies.
@@ -43,7 +43,7 @@ The dataset consists of environmental measurements recorded every 15 minutes ove
 
 ---
 
-## 📈 Features Engineered
+## Features Engineered
 
 - Temperature, Humidity  
 - First-order derivatives (step-to-step changes)  
@@ -52,7 +52,7 @@ The dataset consists of environmental measurements recorded every 15 minutes ove
 
 ---
 
-## ✅ Results Summary
+## Results Summary
 
 - **Isolation Forest**: excels at detecting spikes and strong outliers; less effective for gradual pattern changes.  
 - **PeriodicAverageAnomalyDetector**: effective for periodic and structural anomalies.  
