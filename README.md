@@ -74,7 +74,7 @@ anomaly_detection/
 ```
 
 
-## 🧠 Conclusions
+## Conclusions
 
 Choosing the best anomaly detection model depends on:  
 - Data type (univariate vs. multivariate)  
