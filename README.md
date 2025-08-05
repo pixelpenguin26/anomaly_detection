@@ -56,20 +56,22 @@ The dataset consists of environmental measurements recorded every 15 minutes ove
 
 ```sh
 anomaly_detection/
-├── README.md # This file
-├── simulated_data/ # Simulated data and code to generate CSV files
-│ ├── file_csv/ # CSV files and data generation script
-│ └── generate_data.py # Script to generate the simulated data
-├── isolationforest_model/ # Isolation Forest model scripts
-│ ├── model_train.py
-│ ├── model_test.py
-│ ├── utils.py
-│ └── visualization.py
-├── periodicaverage_model/ # Periodic Average Anomaly Detector scripts
-│ ├── model_train.py
-│ ├── model_test.py
-│ ├── utils.py
-│ └── visualization.py
+├── README.md                   # Project description and instructions
+├── simulated_data/            # Simulated time series data
+│   ├── file_csv/              # Generated CSV datasets
+│   └── generate_data.ipynb       # Script to generate the simulated data
+├── isolationforest_model/     # Isolation Forest implementation
+│   ├── isolationforest.md     # Documentation for the model
+│   ├── multivariata/          # Multivariate anomaly detection code
+│   │   └── isolation_multivariata_semisuper.ipynb
+│   │   └── isolation_multivariata_unsuper.ipynb
+│   └── univariata/            # Univariate anomaly detection code
+│   │   └── isolation_forest_semisuper.ipynb
+│   │   └── isolation_forest_unsuper.ipynb
+├── periodicaverage_model/     # Periodic Average Anomaly Detector
+│   ├── Periodic_Average.md         
+│   ├── periodic_average_semisuper.ipynb          
+│   └── periodic_average_unsuper.ipynb       
 
 ```
 
@@ -82,3 +84,7 @@ Choosing the best anomaly detection model depends on:
 - Availability of labeled data  
 
 Different models suit different scenarios. Empirical comparison is key to selecting the right approach.
+
+
+
+
