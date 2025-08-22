@@ -39,7 +39,7 @@ This guides the algorithm in establishing a threshold for anomaly detection.
 * **Too low** a value may miss real anomalies.
 * If the expected anomaly rate is unknown, it's common to experiment with different values or use `contamination="auto"`.
 
-**🔹How Contamination Works in IsolationForest**
+**How Contamination Works in IsolationForest**
 
 The `contamination` parameter is essentially an estimate of the fraction of outliers in your dataset. Mathematically:
 
@@ -52,7 +52,7 @@ Here:
 * **Expected number of outliers**: what you believe are anomalous points in the dataset.
 * **Total number of samples**: the size of your dataset.
 
-**🔹 How the Algorithm Uses It**
+**How the Algorithm Uses It**
 During training, IsolationForest builds many “Isolation Trees.” Each data point gets an average **path length**, representing how quickly it can be isolated. Points with shorter paths are more likely to be outliers.
 
 After training, each point receives a continuous anomaly score (`decision_function`):
@@ -62,7 +62,7 @@ After training, each point receives a continuous anomaly score (`decision_functi
 
 The model then chooses a threshold based on the `contamination` value. Points below this threshold are labeled as outliers (-1), and others as inliers (1).
 
-**🔹 Practical Implications (scikit-learn)**
+**Practical Implications (scikit-learn)**
 
 Suppose you have $n$ samples and set `contamination = c`. The predicted number of outliers is:
 
